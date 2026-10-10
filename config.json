@@ -1,0 +1,18 @@
+{
+  "host": "127.0.0.1",
+  "port": 8765,
+  "ptt_key": "f9",
+  "stt_engine": "gemini",
+  "gemini_model": "gemini-3.6-flash",
+  "tts_rate": 175,
+  "email_allowlist": [
+    "wissam@sundaymedia.me"
+  ],
+  "monitor_interval_sec": 30,
+  "monitors": [
+    {
+      "name": "Agent health",
+      "url": "http://127.0.0.1:8765/api/health"
+    }
+  ]
+}

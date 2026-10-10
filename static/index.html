@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local agent</title>
+  <link rel="stylesheet" href="/static/app.css?v=3">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>LOCAL AGENT</h1>
+      <div class="sub" id="hint"></div>
+      <div class="chips" id="chips"></div>
+      <label class="model-pick">Model
+        <select id="model"></select>
+      </label>
+    </div>
+    <div id="state">idle</div>
+  </header>
+  <main class="grid">
+    <section>
+      <div class="panel">
+        <h2>Execution</h2>
+        <div id="log"></div>
+        <div class="row">
+          <textarea id="command" placeholder="Type a command"></textarea>
+          <button id="send" type="button">Run</button>
+          <button id="hold" class="hold" type="button">Hold to talk</button>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:16px">
+        <h2>Last exchange</h2>
+        <div id="exchange"></div>
+      </div>
+    </section>
+    <section>
+      <div class="panel">
+        <h2>Drafts waiting for approval</h2>
+        <div id="drafts"></div>
+      </div>
+      <div class="panel" style="margin-top:16px">
+        <h2>Monitors</h2>
+        <div id="monitors"></div>
+        <div class="row"><button id="refresh" type="button">Refresh monitors</button></div>
+      </div>
+      <div class="panel" style="margin-top:16px">
+        <h2>Gmail</h2>
+        <p class="sub">Connect uses the OAuth file in secrets. Sending happens only from an approved draft.</p>
+        <button id="connect" type="button">Connect Gmail</button>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js?v=3"></script>
+</body>
+</html>
